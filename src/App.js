@@ -6,6 +6,8 @@ import Formulario from './views/Formulario';
 import Listado from './views/Listado';
 
 function App() {
+
+  <h1 className='adm'>ADMINISTRADOR DE PACIENTES</h1>
   // Obtener las citas almacenadas del localStorage al cargar la página
   const citasGuardadas = JSON.parse(localStorage.getItem('citas'));
   const [citas, setCitas] = useState(citasGuardadas || []);
@@ -25,9 +27,11 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Formulario agregarCita={agregarCita} />
-      <Listado citas={citas} eliminarCita={eliminarCita} />
+    <div className="container">
+      <div className="contenido">
+        <Formulario agregarCita={agregarCita} />
+        <Listado citas={citas} eliminarCita={eliminarCita} />
+      </div>
     </div>
   );
 }

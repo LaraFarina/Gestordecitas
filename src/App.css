@@ -1,16 +1,22 @@
-/* App.css */
-
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+    background: radial-gradient(#D41872, #FF0066);
+
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
   padding: 20px;
+}
+
+/* Contenedor para formulario y listado */
+.contenido {
+  display: flex; /* Utilizando flexbox para dividir en dos columnas */
+  gap: 20px; /* Espacio entre los dos paneles */
 }
 
 /* Estilos para el formulario */
@@ -18,8 +24,9 @@ body {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
+  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  flex: 1; /* Ocupa el espacio disponible */
 }
 
 .formulario h2 {
@@ -37,7 +44,7 @@ body {
 .formulario input[type="date"],
 .formulario input[type="time"],
 .formulario textarea {
-  width: 100%;
+  width: 95%; /* Ancho completo del contenedor */
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -69,6 +76,8 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Ocupa el espacio disponible */
+  max-width: 500px; /* Ancho máximo del listado */
 }
 
 .listado h2 {
@@ -108,6 +117,7 @@ body {
   background-color: #c82333;
 }
 
+
 /* Estilos para cada cita */
 .cita {
   background-color: #f9f9f9;
@@ -133,4 +143,13 @@ body {
 
 .cita button:hover {
   background-color: #c82333;
+}
+
+.adm{
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
 }

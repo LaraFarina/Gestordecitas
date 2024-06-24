@@ -3,7 +3,7 @@ import React from 'react';
 function FormularioComponente({ nombreMascota, nombreDueño, fecha, hora, sintomas, error, setNombreMascota, setNombreDueño, setFecha, setHora, setSintomas, handleSubmit }) {
   return (
     <div className="formulario">
-      <h2>ADMINISTRADOR DE PACIENTES</h2>
+      <h2>Crear mi cita</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input type="text" value={nombreMascota} onChange={(e) => setNombreMascota(e.target.value)} placeholder="Nombre Mascota" required />
